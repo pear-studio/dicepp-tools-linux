@@ -1,3 +1,4 @@
 #! /bin/bash
-mkdir BotData
-ln -s ./BotData ./DicePP/src/plugins/DicePP/Data
+SOURCE_PATH=$(readlink -f ./DicePP/src/plugins/DicePP/Data)
+TARGET_PATH=$(readlink -f ./BotData)
+ln -s $SOURCE_PATH $TARGET_PATH
