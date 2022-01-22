@@ -5,6 +5,7 @@ services:
     image: alpine
     volumes:
       - ".:/gocqhttp"
+      - "../DicePP:/app/" # For send images in BotData
     restart: on-failure
     logging:
       driver: json-file
